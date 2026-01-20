@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.flowpaisa.app",
+      "sha256_cert_fingerprints": [
+        "2B:75:37:FB:04:76:F8:ED:82:79:2B:E5:2F:A4:9C:64:A9:6B:66:15:7F:18:74:12:C8:7B:B8:27:F0:BC:AB:C4"
+      ]
+    }
+  }
+]
