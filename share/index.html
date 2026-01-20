@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Opening FlowPaisa...</title>
+    <meta property="og:title" content="FlowPaisa Transaction" />
+    <meta
+      property="og:description"
+      content="Click to view and import this transaction in your FlowPaisa app."
+    />
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        padding: 50px;
+      }
+      .btn {
+        background: #2196f3;
+        color: white;
+        padding: 15px 25px;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Opening FlowPaisa</h1>
+    <p>If the app didn't open automatically, click the button below:</p>
+    <!-- This tries to force open the app using the custom scheme -->
+    <a href="flowpaisa://share${window.location.search}" class="btn"
+      >Open App</a
+    >
+  </body>
+  <script>
+    // Automatically try to redirect to the app's custom scheme
+    window.onload = function () {
+      const urlParams = window.location.search;
+      if (urlParams) {
+        window.location.href = "flowpaisa://share" + urlParams;
+      }
+    };
+  </script>
+</html>
