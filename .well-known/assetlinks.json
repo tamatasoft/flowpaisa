@@ -5,9 +5,9 @@
         ],
         "target": {
             "namespace": "android_app",
-            "package_name": "com.flowpaisa.app",
+            "package_name": "com.tamatasoft.flowpaisa",
             "sha256_cert_fingerprints": [
-                "2B:75:37:FB:04:76:F8:ED:82:79:2B:E5:2F:A4:9C:64:A9:6B:66:15:7F:18:74:12:C8:7B:B8:27:F0:BC:AB:C4"
+                "07:CA:73:6E:70:64:92:8E:AD:0F:98:97:CD:9B:9F:BA:AD:9B:5F:47:A1:CC:A9:64:FD:2D:D7:9C:BD:83:C9:59"
             ]
         }
     }
