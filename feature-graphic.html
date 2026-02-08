@@ -131,17 +131,17 @@
         height: 100%;
         display: flex;
         justify-content: center;
-        align-items: flex-end; /* Align to bottom */
+        align-items: flex-start; /* Align to top of container */
         z-index: 1;
         position: relative;
+        padding-top: 60px; /* Adjust this to align top of phone with top of logo */
       }
 
       .phone-image {
-        height: 520px; /* Bigger vertical image */
+        height: 650px; /* Much bigger, will cut off at bottom */
         width: auto;
         object-fit: contain;
         filter: drop-shadow(-20px 10px 30px rgba(0, 0, 0, 0.4));
-        margin-bottom: -20px; /* Bleed off the bottom slightly for a modern look */
       }
 
       .instruction {
