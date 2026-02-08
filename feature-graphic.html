@@ -1,199 +1,187 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flowpaisa Feature Graphic Generator</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        :root {
-            --primary-start: #00D4FF;
-            --primary-end: #0088CC;
-            --success-green: #10B981;
-            --white: #FFFFFF;
-        }
+      :root {
+        --primary-start: #00d4ff;
+        --primary-end: #0088cc;
+        --success-green: #10b981;
+        --white: #ffffff;
+      }
 
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background: #f0f2f5;
-            font-family: 'Poppins', sans-serif;
-        }
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #f0f2f5;
+        font-family: "Poppins", sans-serif;
+      }
 
-        /* The exact dimensions required by Google Play */
-        .feature-graphic {
-            width: 1024px;
-            height: 500px;
-            background: linear-gradient(135deg, var(--primary-start) 0%, var(--primary-end) 100%);
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            padding: 0 60px;
-            box-sizing: border-box;
-            color: var(--white);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
-        }
+      /* The exact dimensions required by Google Play */
+      .feature-graphic {
+        width: 1024px;
+        height: 500px;
+        background: linear-gradient(
+          135deg,
+          var(--primary-start) 0%,
+          var(--primary-end) 100%
+        );
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        padding: 0 60px;
+        box-sizing: border-box;
+        color: var(--white);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+      }
 
-        /* Subtle background pattern */
-        .feature-graphic::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.1) 0%, transparent 20%),
-                              radial-gradient(circle at 80% 70%, rgba(255,255,255,0.1) 0%, transparent 20%);
-            pointer-events: none;
-        }
+      /* Subtle background pattern */
+      .feature-graphic::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image:
+          radial-gradient(
+            circle at 20% 30%,
+            rgba(255, 255, 255, 0.1) 0%,
+            transparent 20%
+          ),
+          radial-gradient(
+            circle at 80% 70%,
+            rgba(255, 255, 255, 0.1) 0%,
+            transparent 20%
+          );
+        pointer-events: none;
+      }
 
-        .content {
-            flex: 1;
-            z-index: 2;
-        }
+      .content {
+        flex: 1;
+        z-index: 2;
+      }
 
-        .logo-container {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
+      .logo-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
 
-        .logo-img {
-            width: 100px;
-            height: 100px;
-            background: white;
-            border-radius: 24px;
-            padding: 15px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            margin-right: 25px;
-        }
+      .logo-img {
+        width: 100px;
+        height: 100px;
+        background: white;
+        border-radius: 24px;
+        padding: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        margin-right: 25px;
+      }
 
-        .brand-name {
-            font-size: 64px;
-            font-weight: 700;
-            margin: 0;
-            letter-spacing: -1px;
-            text-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
+      .brand-name {
+        font-size: 64px;
+        font-weight: 700;
+        margin: 0;
+        letter-spacing: -1px;
+        text-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
 
-        .tagline {
-            font-size: 28px;
-            font-weight: 400;
-            opacity: 0.95;
-            margin-bottom: 40px;
-        }
+      .tagline {
+        font-size: 28px;
+        font-weight: 400;
+        opacity: 0.95;
+        margin-bottom: 40px;
+      }
 
-        .features-list {
-            display: flex;
-            gap: 15px;
-        }
+      .features-list {
+        display: flex;
+        gap: 15px;
+      }
 
-        .feature-pill {
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            padding: 8px 20px;
-            border-radius: 50px;
-            font-size: 16px;
-            font-weight: 600;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
+      .feature-pill {
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        padding: 8px 20px;
+        border-radius: 50px;
+        font-size: 16px;
+        font-weight: 600;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
 
-        /* Mockup area */
-        .mockup-container {
-            position: relative;
-            width: 350px;
-            height: 450px;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            z-index: 1;
-        }
+      /* Mockup area */
+      .mockup-container {
+        position: relative;
+        width: 400px;
+        height: 500px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        z-index: 1;
+      }
 
-        .phone-mockup {
-            width: 240px;
-            height: 480px;
-            background: #1a1f3a; /* darkCard color from AppColors */
-            border: 8px solid #334155;
-            border-radius: 36px;
-            position: relative;
-            transform: rotate(-5deg) translateY(40px);
-            box-shadow: -20px 20px 40px rgba(0,0,0,0.3);
-            overflow: hidden;
-        }
+      .phone-image {
+        height: 480px;
+        width: auto;
+        transform: rotate(-5deg) translateY(20px);
+        filter: drop-shadow(-20px 20px 30px rgba(0, 0, 0, 0.3));
+      }
 
-        /* Simulated UI */
-        .ui-header {
-            height: 60px;
-            background: var(--primary-start);
-            padding: 15px;
-            box-sizing: border-box;
-        }
-        .ui-card {
-            margin: 15px;
-            height: 100px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 15px;
-        }
-        .ui-list-item {
-            margin: 10px 15px;
-            height: 40px;
-            background: rgba(255,255,255,0.05);
-            border-radius: 8px;
-        }
-
-        .instruction {
-            position: absolute;
-            bottom: -60px;
-            left: 0;
-            right: 0;
-            text-align: center;
-            color: #666;
-            font-size: 14px;
-        }
+      .instruction {
+        position: absolute;
+        bottom: -60px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        color: #666;
+        font-size: 14px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <div style="position: relative">
+      <div class="feature-graphic" id="capture">
+        <div class="content">
+          <div class="logo-container">
+            <!-- Updated path to assets/logo.png -->
+            <img src="assets/logo.png" alt="Flowpaisa Logo" class="logo-img" />
+            <h1 class="brand-name">Flowpaisa</h1>
+          </div>
+          <div class="tagline">Track Every Paisa.</div>
 
-    <div style="position: relative;">
-        <div class="feature-graphic" id="capture">
-            <div class="content">
-                <div class="logo-container">
-                    <!-- Using the logo from your assets -->
-                    <img src="../assets/images/logo_square.png" alt="Flowpaisa Logo" class="logo-img">
-                    <h1 class="brand-name">Flowpaisa</h1>
-                </div>
-                <div class="tagline">Track Every Paisa.</div>
-                
-                <div class="features-list">
-                    <div class="feature-pill">Receipt Scan</div>
-                    <div class="feature-pill">Cloud Sync</div>
-                    <div class="feature-pill">WhatsApp Integration</div>
-                </div>
-            </div>
+          <div class="features-list">
+            <div class="feature-pill">Receipt Scan</div>
+            <div class="feature-pill">Cloud Sync</div>
+            <div class="feature-pill">WhatsApp Integration</div>
+          </div>
+        </div>
 
-            <div class="mockup-container">
-                <div class="phone-mockup">
-                    <div class="ui-header"></div>
-                    <div class="ui-card"></div>
-                    <div class="ui-list-item"></div>
-                    <div class="ui-list-item"></div>
-                    <div class="ui-list-item"></div>
-                    <div class="ui-list-item"></div>
-                </div>
-            </div>
+        <div class="mockup-container">
+          <!-- Updated path to assets/mobile.png -->
+          <img
+            src="assets/mobile.png"
+            alt="App Screenshot"
+            class="phone-image"
+          />
         </div>
-        
-        <div class="instruction">
-            Dimensions: 1024x500 (Google Play Standard) | Open this file in a browser and take a screenshot.
-        </div>
+      </div>
+
+      <div class="instruction">
+        Dimensions: 1024x500 (Google Play Standard) | Open this file in a
+        browser and take a screenshot.
+      </div>
     </div>
-
-</body>
+  </body>
 </html>
